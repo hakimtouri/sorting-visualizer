@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+
+<head>
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <h1>Sorting Visualizer, by Hakim Touri</h1>
+  <div id="container"></div>
+
+  <hr>
+
+  <div>
+    <button onClick = "generate()">Generate</button>
+    <button onClick="play('bubbleSort')">Bubble Sort</button>
+    <button onClick="play('quickSort')">Quick Sort</button>
+    <button onClick="play('mergeSort')">Merge Sort</button>
+
+  </div>
+
+  <div id="sliderContainer">
+    <label for="rangeSlider">Size, n: </label>
+    <input type="range" id="rangeSlider" min="5" max="35" value="10">
+    <span id="sliderValue"></span>
+</div>
+
+<div id="timeSliderContainer">
+  <label for="rangeSlider">Speed: </label>
+  <input type="range" id="timeSlider" min="25" max="125" value="125">
+  <span id="timeSliderValue"></span>
+</div>
+
+<script src="script.js" charset="utf-8"></script>
+</body>
+
+
+</html>

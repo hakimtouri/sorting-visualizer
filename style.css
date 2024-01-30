@@ -1,0 +1,30 @@
+#container{
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+body{
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bar{
+  width: 10px;
+  background-color: black;
+  margin: 1px;
+}
+
+#rangeSlider {
+  width: 300px;
+  margin: 20px;
+}
+
+#sliderContainer {
+    text-align: center;
+}
+#timeSliderContainer {
+    text-align: center;
+}
