@@ -80,7 +80,7 @@ function animate(moves) {
     }
     const move = moves.shift();
 
-    // Handle swap and compare moves as before
+    // Handle swap and compare moves
     if (move.type == "swap"){
         const [i, j] = move.indices;
         [array[i], array[j]] = [array[j], array[i]];
@@ -93,16 +93,12 @@ function animate(moves) {
       const [i] = move.indices;
       array[i] = move.value;
       playNote((100 * array[i] + 250));
-      console.log((array[i]));
     }
 
     showBars(move);
     setTimeout(function() {
         animate(moves);
     }, time);
-
-    console.log("Playing note for indices:", move.indices, "Type:", move.type);
-
 }
 
 function bubbleSort(array) {
@@ -210,17 +206,11 @@ function showBars(move) {
 
 document.getElementById("rangeSlider").addEventListener("input", function() {
     const sliderValue = this.value;
-    // Uncomment this line if you want to display the value
-    // document.getElementById("sliderValue").textContent = sliderValue;
-
     n = parseInt(sliderValue, 10);
     init();
 });
 
 document.getElementById("timeSlider").addEventListener("input", function() {
     const actualValue = 150 - this.value;
-    // Uncomment this line if you want to display the value
-    // document.getElementById("timeSliderValue").textContent = actualValue;
-
     time = parseInt(actualValue, 10);
 });
